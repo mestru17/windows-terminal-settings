@@ -58,8 +58,8 @@
                 //"fontFace": "FiraCode Nerd Font",
                 //"fontFace": "Cascadia Code PL",
                 //"fontFace": "CaskaydiaCove Nerd Font",
-                "fontSize": 11,
-                "colorScheme": "Andromeda",
+                "fontSize": 11, //11,
+                "colorScheme": "TokyoNightStorm",
                 "cursorShape": "filledBox"
             },
             {
@@ -73,7 +73,8 @@
 
     // Add custom color schemes to this array.
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
-    "schemes": [{
+    "schemes": [
+      {
         "name": "Andromeda",
         "black": "#000000",
         "red": "#cd3131",
@@ -95,7 +96,29 @@
         "foreground": "#e5e5e5",
         "selectionBackground": "#5a5c62",
         "cursorColor": "#f8f8f0"
-      }],
+      },
+      {
+        "name": "TokyoNightStorm",
+        "black": "#3b4261",
+        "red": "#f7768e",
+        "green": "#73daca",
+        "yellow": "#e0af68",
+        "blue": "#7aa2f7",
+        "purple": "#bb9af7",
+        "cyan": "#7dcfff",
+        "white": "#7982a9",
+        "brightBlack": "#3b4261",
+        "brightRed": "#f7768e",
+        "brightGreen": "#73daca",
+        "brightYellow": "#e0af68",
+        "brightBlue": "#7aa2f7",
+        "brightPurple": "#bb9af7",
+        "brightCyan": "#7dcfff",
+        "brightWhite": "#a9b1d6",
+        "background": "#1f2335",
+        "foreground": "#7982a9"
+      }
+    ],
 
     // Add custom actions and keybindings to this array.
     // To unbind a key combination from your defaults.json, set the command to "unbound".
@@ -115,6 +138,9 @@
         // - "split": "auto" makes this pane open in the direction that provides the most surface area.
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
         // To learn more about panes, visit https://aka.ms/terminal-panes
-        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+
+        // Press Ctrl++ to zoom in (increase font size)
+        { "command": { "action": "adjustFontSize", "delta": 1 }, "keys": "ctrl+plus" }
     ]
 }
